@@ -7,23 +7,27 @@ import Chapter from './views/admin/chapter'
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes: [{
-    path: '*',
+    path: "*",
     redirect: "/login",
   }, {
-    path: '/login',
+    path: "/login",
     component: Login
   },{
-      path: '/admin',
+      path: "/",
+      name: "admin",
       component: Admin,
       children:[{
-        path: 'wellcome',
+        path: "wellcome",
+        name: "wellcome",
         component:Wellcome,
       },{
-        path: 'business/chapter',
+        path: "business/chapter",
+        name: "business/chapter",
         component: Chapter
+
       }
       ]
   }
