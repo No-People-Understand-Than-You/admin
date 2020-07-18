@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Login from './views/login.vue'
 import Admin from './views/admin.vue'
 import Wellcome from './views/admin/wellcome.vue'
-
+import Chapter from './views/admin/chapter'
 Vue.use(Router);
 
 export default new Router({
@@ -21,7 +21,11 @@ export default new Router({
       children:[{
         path: 'wellcome',
         component:Wellcome,
-      }]
+      },{
+        path: 'business/chapter',
+        component: Chapter
+      }
+      ]
   }
   ]
 })
